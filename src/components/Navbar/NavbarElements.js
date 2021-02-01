@@ -21,6 +21,7 @@ export const Nav = styled.nav`
   @media screen and (max-width: 1024px) {
     justify-content: flex-end;
     background: none;
+    
   }
 
   .circle {
@@ -33,6 +34,7 @@ export const Nav = styled.nav`
       justify-content: center;
       align-items: center;
       border-radius: 50%;
+      margin-right: .8em;
     }
   }
 `;

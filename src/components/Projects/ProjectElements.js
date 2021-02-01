@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const Wrapper = styled.div`
   display: grid;
   width: 100vw;
@@ -36,7 +37,7 @@ export const Col1 = styled.div`
   h2 {
     writing-mode: vertical-rl;
     text-orientation: upright;
-    font-size: 2.5em;
+    font-size: clamp(1.5em, 4vw, 2.5em);
     letter-spacing: 0.8em;
     text-transform: uppercase;
     text-shadow: -4px -4px 0px #fff;
@@ -53,11 +54,30 @@ export const Col1 = styled.div`
 
 export const Col2 = styled.div`
   grid-area: b;
-
   display: flex;
   justify-content: flex-start;
   align-items: center;
 
+
+.wrapper {
+  display: flex;
+  
+}
+  .btn {
+    position: relative;
+    
+
+  }
+
+  .active {
+    position: absolute;
+    width: 150px;
+    bottom: 0;
+    height: 5px;
+    background: #721cc9;
+    left: 28%;
+    
+  }
   button {
     outline: none;
     border: none;
@@ -68,23 +88,26 @@ export const Col2 = styled.div`
     padding-bottom: 0.3em;
     cursor: pointer;
 
-    &:hover {
+    /* &:hover {
       border-bottom: 3.8px solid #721cc9;
-    }
+    } */
   }
 
-  button:first-child {
+  /* button:first-child {
     border-bottom: ${({ website }) =>
       website ? "3.8px solid #721cc9" : "none"};
   }
 
   button:nth-child(2) {
     border-bottom: ${({ webapp }) => (webapp ? "3.8px solid #721cc9" : "none")};
-  }
+  } */
 
   @media screen and (max-width: 768px) {
     button {
       font-size: 1.5em;
+    }
+    .active {
+      width: 100px;
     }
   }
 `;
@@ -105,6 +128,11 @@ export const ColWrapper = styled.div`
   background-color: #000;
   overflow: auto;
 
+@media screen and (max-width: 400px) {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 300px;
+  grid-gap: .5em;
+}
   .slide {
     position: relative;
     display: inline-block;

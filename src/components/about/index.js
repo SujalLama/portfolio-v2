@@ -1,5 +1,5 @@
 import React from "react";
-import author from "../../images/me.jpg";
+
 import {
   Wrapper,
   Col1,
@@ -10,13 +10,14 @@ import {
 } from "./AboutElements";
 
 const About = () => {
+  
   return (
     <>
       <Wrapper id="about">
         <Col1>
           <h2>About Me ...</h2>
           <ImageWrapper>
-            <img src={author} />
+            <img src={process.env.PUBLIC_URL + '/images/me.jpg'} />
           </ImageWrapper>
           <Content>
             <p>

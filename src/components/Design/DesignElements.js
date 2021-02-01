@@ -7,13 +7,8 @@ export const Wrapper = styled.div`
   justify-items: center;
   align-items: flex-start;
 
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-
   h2 {
-    font-size: clamp(2.4em, 5vw, 4.5em);
+    font-size: clamp(2em, 5vw, 4.5em);
     text-transform: capitalize;
     font-weight: 100;
     margin: 1em 0;
@@ -39,7 +34,7 @@ export const DesignWrapper = styled.div`
   }
 
   @media screen and (max-width: 400px) {
-    overflow: auto;
+    width: 90%;
   }
 `;
 
@@ -73,9 +68,20 @@ export const Card = styled.div`
   @media screen and (max-width: 1000px) {
     p {
       display: none;
+      
     }
     div {
       margin-bottom: 0.6em;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    width: 150px;
+    height: 150px;
+    div {
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
     }
   }
 `;

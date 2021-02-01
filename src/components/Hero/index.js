@@ -7,8 +7,8 @@ import {
   Col1,
   Col2
 } from "./HeroElements";
-import author from "../../images/author.jpg";
-import heroName from "../../images/heroname.svg";
+// import author from "../../images/author.jpg";
+// import heroName from "../../images/heroname.svg";
 
 const Hero = () => {
   return (
@@ -21,7 +21,7 @@ const Hero = () => {
             transition={{ delay: 0.5, duration: 0.5 }}
           >
             <ImageWrapper>
-              <img src={author} />
+              <img src={process.env.PUBLIC_URL + '/images/author.jpg'} />
             </ImageWrapper>
           </Col1>
           <Col2
@@ -30,7 +30,7 @@ const Hero = () => {
             transition={{ delay: 0.5, duration: 0.5 }}
           >
             <Typography>
-              <img src={heroName} />
+              <img src={process.env.PUBLIC_URL + '/images/typo.svg'} />
             </Typography>
           </Col2>
         </HeroWrapper>

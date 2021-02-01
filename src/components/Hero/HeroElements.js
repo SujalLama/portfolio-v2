@@ -52,6 +52,12 @@ export const HeroWrapper = styled.div`
     grid-template-rows: repeat(2, 50%);
     padding-top: 3em;
   }
+
+  @media screen and (max-width: 400px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 50%);
+    padding-top: 2em;
+  }
 `;
 
 export const Col1 = styled(motion.div)`
@@ -94,6 +100,12 @@ export const ImageWrapper = styled.div`
     height: 250px;
     box-shadow: -10px 18px 0 20px #f49301;
   }
+
+  @media screen and (max-width: 400px) {
+    width: 150px;
+    height: 150px;
+    box-shadow: -10px 18px 0 20px #f49301;
+  }
 `;
 
 export const Typography = styled.div`
@@ -116,6 +128,14 @@ export const Typography = styled.div`
       width: 70%;
       height: 70%;
       margin-left: 3em;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    img {
+      width: 70%;
+      height: 70%;
+      margin-left: 2.5em;
     }
   }
 `;

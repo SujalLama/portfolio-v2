@@ -63,7 +63,7 @@ export const Col2 = styled.div`
 
   h2 {
     text-align: right;
-    font-size: clamp(2em, 4vw, 3em);
+    font-size: clamp(1.5em, 4vw, 3em);
     padding: 0.5em 0.5em 0.5em 5.5em;
     border: 5px solid #000;
     margin: 1.3em 0.7em 1em 1em;
@@ -115,12 +115,14 @@ export const Content = styled.div`
   overflow: auto;
 
   @media screen and (max-width: 1024px) {
-    overflow: hidden;
+    overflow: auto;
     position: relative;
     border-radius: 10px;
     width: 80%;
     height: 60%;
   }
+
+  
 `;
 
 export const ListWrapper = styled.div`
@@ -142,7 +144,7 @@ export const ListWrapper = styled.div`
   }
   ul li {
     list-style: none;
-    font-size: 1.4em;
+    font-size: clamp(1.2em, 4vw, 2em);
     font-weight: bold;
   }
 `;

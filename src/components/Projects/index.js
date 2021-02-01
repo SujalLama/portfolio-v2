@@ -9,19 +9,13 @@ import {
   ImageWrapper
 } from "./ProjectElements";
 
-import bookish from "../../images/bookish.JPG";
-import wordify from "../../images/wordify.JPG";
-import emi from "../../images/emi-calc.JPG";
-import pixalarity from "../../images/pixalarity.JPG";
-import taskManage from "../../images/task-manage.JPG";
-import theory from "../../images/theory.JPG";
-import transitive from "../../images/transitive.JPG";
-import expense from "../../images/expense-tracker.JPG";
-
 import { FaGlobe } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 
+import {AnimateSharedLayout, motion} from 'framer-motion';
+
 const Projects = () => {
+  const [isOpen, setIsOpen] = useState(true);
   const [website, setWebsite] = useState(true);
 
   const [webapp, setWebapp] = useState(false);
@@ -42,14 +36,27 @@ const Projects = () => {
         <Col1>
           <h2>Projects</h2>
         </Col1>
+
         <Col2 website={website} webapp={webapp}>
+          <AnimateSharedLayout>
+            <div className="wrapper">
+              <div  className="btn" onClick={() => setIsOpen(!isOpen)}>
+                        {isOpen && <motion.div className="active" layoutId="underline" tansition={{stiffness: 400, damping: 30}}/>}
           <button onClick={openWebsite}>Wetsites</button>
+              </div>
+
+              <div  className="btn" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen || <motion.div className="active" layoutId="underline" tansition={{stiffness: 400, damping: 30}}/>}
           <button onClick={openWebapp}>Webapps</button>
+              </div>
+          </div>
+          </AnimateSharedLayout>
         </Col2>
 
         {website && (
-          <Col3>
-            <ColWrapper>
+          <Col3 >
+            <ColWrapper >
+            
               <div className="slide slide-bottom">
                 <div className="slide-content">
                   <h3>Bookish</h3>
@@ -71,7 +78,7 @@ const Projects = () => {
                   </div>
                 </div>
                 <ImageWrapper>
-                  <img src={bookish} />
+                  <img src={process.env.PUBLIC_URL + '/images/bookish.JPG'} />
                 </ImageWrapper>
               </div>
 
@@ -96,7 +103,7 @@ const Projects = () => {
                   </div>
                 </div>
                 <ImageWrapper>
-                  <img src={pixalarity} />
+                  <img src={process.env.PUBLIC_URL + '/images/pixalarity.JPG'} />
                 </ImageWrapper>
               </div>
 
@@ -121,7 +128,7 @@ const Projects = () => {
                   </div>
                 </div>
                 <ImageWrapper>
-                  <img src={transitive} />
+                  <img src={process.env.PUBLIC_URL + '/images/transitive.JPG'} />
                 </ImageWrapper>
               </div>
 
@@ -146,7 +153,7 @@ const Projects = () => {
                   </div>
                 </div>
                 <ImageWrapper>
-                  <img src={theory} />
+                  <img src={process.env.PUBLIC_URL + '/images/theory.JPG'} />
                 </ImageWrapper>
               </div>
             </ColWrapper>
@@ -154,8 +161,8 @@ const Projects = () => {
         )}
 
         {webapp && (
-          <Col3>
-            <ColWrapper>
+          <Col3 >
+            <ColWrapper >
               <div className="slide slide-bottom">
                 <div className="slide-content">
                   <h3>Task Manager</h3>
@@ -177,7 +184,7 @@ const Projects = () => {
                   </div>
                 </div>
                 <ImageWrapper>
-                  <img src={taskManage} />
+                  <img src={process.env.PUBLIC_URL + '/images/task-manage.jpg'} />
                 </ImageWrapper>
               </div>
 
@@ -202,7 +209,7 @@ const Projects = () => {
                   </div>
                 </div>
                 <ImageWrapper>
-                  <img src={expense} />
+                  <img src={process.env.PUBLIC_URL + '/images/expense-tracker.jpg'}/>
                 </ImageWrapper>
               </div>
 
@@ -227,7 +234,7 @@ const Projects = () => {
                   </div>
                 </div>
                 <ImageWrapper>
-                  <img src={emi} />
+                  <img src={process.env.PUBLIC_URL + '/images/emi-calc.jpg'} />
                 </ImageWrapper>
               </div>
 
@@ -255,12 +262,13 @@ const Projects = () => {
                   </div>
                 </div>
                 <ImageWrapper>
-                  <img src={wordify} />
+                  <img src={process.env.PUBLIC_URL + '/images/wordify.jpg'} />
                 </ImageWrapper>
               </div>
             </ColWrapper>
           </Col3>
         )}
+        
       </Wrapper>
     </>
   );
