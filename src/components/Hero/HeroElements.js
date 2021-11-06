@@ -43,8 +43,11 @@ export const HeroWrapper = styled.div`
   }
 
   @media screen and (max-width: 1024px) {
-    grid-template-columns: minmax(500px, 1fr);
-    grid-template-rows: repeat(2, minmax(400px, 1fr));
+    /* grid-template-columns: minmax(500px, 1fr);
+    grid-template-rows: repeat(2, minmax(400px, 1fr)); */
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 50%);
+    padding-top: 3em;
   }
 
   @media screen and (max-width: 768px) {

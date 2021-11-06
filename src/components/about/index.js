@@ -20,22 +20,9 @@ const About = () => {
             <img src={process.env.PUBLIC_URL + '/images/me.jpg'} />
           </ImageWrapper>
           <Content>
-            <p>
-              Hi, I am sujal lama. I am a frontend developer situated in Boudha,
-              kathmandu, Nepal. I am a BBA graduate. I always had a keen
-              interest on technology especially web technologies and wondered
-              how it works. So, after graduation, I dedicated my time and effort
-              on learning web technologies.
-            </p>
-
-            <p>
-              I wasn't satisfied with the wordpress though it is a great tool. I
-              wanted to fully customize my website. So I started exploring about
-              the web technologies. I started learning about HTML, CSS,
-              Javascript, react and node. The more I learned about these the
-              more I got hooked into these technologies. Hence, now I aspire to
-              make career in this field.
-            </p>
+            <p>Hi, I am sujal lama. I am a full-stack developer situated at kathmandu, Nepal.  I have one year of experience as a graphic designer and 1.5 years of coding as  a web and mobile developer.</p>
+            <p>Language I know is JavaScript and dart, and frameworks I use  are react, express and flutter.    However, I am not limited to these technologies and willing to learn new ones.</p>
+            <p>Coding aside, I enjoy reading, watching  movies, singing and visiting new places.</p>
           </Content>
         </Col1>
         <Col2>
@@ -55,12 +42,12 @@ const About = () => {
             </ul>
 
             <ul>
-              <li>Github</li>
-              <li>Gatsby</li>
-              <li>Contentful</li>
               <li>Node</li>
+              <li>GraphQl</li>
+              <li>ORM</li>
+              <li>Postgres</li>
               <li>MongoDB</li>
-              <li>Express</li>
+              <li>Flutter</li>
             </ul>
           </ListWrapper>
         </Col2>

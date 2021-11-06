@@ -15,9 +15,9 @@ export const Wrapper = styled.div`
     height: 10vh;
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 340px) {
     h2 {
-      height: 10vh;
+      font-size: 1.6em;
     }
   }
 `;
@@ -56,7 +56,6 @@ export const Card = styled.div`
     color: #fff;
     box-shadow: -2px 5px 30px #979797;
     font-size: 3em;
-
     margin-bottom: 1em;
   }
 
@@ -75,9 +74,19 @@ export const Card = styled.div`
     }
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 500px) {
     width: 150px;
     height: 150px;
+    div {
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+    }
+  }
+
+   @media screen and (max-width: 340px) {
+    width: 100px;
+    height: 100px;
     div {
       width: 100px;
       height: 100px;

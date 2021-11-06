@@ -5,16 +5,16 @@ export const Wrapper = styled.div`
   display: grid;
   width: 100vw;
 
-  height: 100vh;
+  min-height: 100vh;
   grid-template-columns: 15% 1fr;
-  grid-template-rows: 20% 1fr;
+  grid-template-rows: 200px 1fr;
   grid-template-areas:
     "a b"
     "a c";
 
   @media screen and (max-width: 768px) {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     grid-template-columns: 1fr;
     grid-template-rows: 15% 10% 75%;
     grid-template-areas:

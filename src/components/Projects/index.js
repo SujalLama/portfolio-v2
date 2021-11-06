@@ -41,12 +41,16 @@ const Projects = () => {
           <AnimateSharedLayout>
             <div className="wrapper">
               <div  className="btn" onClick={() => setIsOpen(!isOpen)}>
-                        {isOpen && <motion.div className="active" layoutId="underline" tansition={{stiffness: 400, damping: 30}}/>}
+                        {isOpen && <motion.div className="active" layoutId="underline" 
+                        animate={{backgroundColor: '#f49301'}}
+                        tansition={{stiffness: 400, damping: 30}}/>}
           <button onClick={openWebsite}>Wetsites</button>
               </div>
 
               <div  className="btn" onClick={() => setIsOpen(!isOpen)}>
-            {isOpen || <motion.div className="active" layoutId="underline" tansition={{stiffness: 400, damping: 30}}/>}
+            {isOpen || <motion.div className="active" layoutId="underline"
+            animate={{backgroundColor: '#721cc9'}}
+            tansition={{stiffness: 400, damping: 30}}/>}
           <button onClick={openWebapp}>Webapps</button>
               </div>
           </div>

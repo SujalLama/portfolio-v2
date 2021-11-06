@@ -12,9 +12,9 @@ export const Wrapper = styled.div`
   justify-items: center;
 
   @media screen and (max-width: 1024px) {
-    height: 150vh;
+    height: 100vh;
     grid-template-columns: 100vw;
-    grid-template-rows: 80vh 70vh;
+    grid-template-rows: 100vh;
   }
 `;
 
@@ -53,9 +53,6 @@ export const Col1 = styled.div`
 `;
 
 export const Col2 = styled.div`
-  width: 100%;
-  height: 100%;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,11 +65,15 @@ export const Col2 = styled.div`
     border: 5px solid #000;
     margin: 1.3em 0.7em 1em 1em;
   }
+
+  @media screen and (max-width: 1024px) {
+      display: none;
+    }
 `;
 
 export const ImageWrapper = styled.div`
-  width: 55%;
-  height: 70%;
+  width: 500px;
+  height: 520px;
   box-shadow: -18px 18px 0px #999;
   img {
     width: 100%;
@@ -111,8 +112,16 @@ export const Content = styled.div`
   width: 60%;
   height: 50%;
   background: rgba(244, 147, 1, 0.9);
-  padding: 1em;
+  padding: 0 1em;
   overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  p:first-child {
+    padding-top: 2em;
+  }
 
   @media screen and (max-width: 1024px) {
     overflow: auto;
@@ -121,8 +130,6 @@ export const Content = styled.div`
     width: 80%;
     height: 60%;
   }
-
-  
 `;
 
 export const ListWrapper = styled.div`
