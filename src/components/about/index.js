@@ -20,7 +20,7 @@ const About = () => {
             <img src={process.env.PUBLIC_URL + '/images/me.jpg'} />
           </ImageWrapper>
           <Content>
-            <p>Hi, I am sujal lama. I am a full-stack developer situated at kathmandu, Nepal.  I have one year of experience as a graphic designer and 1.5 years of coding as  a web and mobile developer.</p>
+            <p>Hi, I am sujal lama. I am a full-stack developer situated at kathmandu, Nepal.  I have one year of experience as a graphic designer and 1+ years of coding as  a web and mobile developer.</p>
             <p>Language I know is JavaScript and dart, and frameworks I use  are react, express and flutter.    However, I am not limited to these technologies and willing to learn new ones.</p>
             <p>Coding aside, I enjoy reading, watching  movies, singing and visiting new places.</p>
           </Content>

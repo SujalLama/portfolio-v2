@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   width: 100vw;
-  height: 100vh;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -128,7 +127,7 @@ export const Content = styled.div`
     position: relative;
     border-radius: 10px;
     width: 80%;
-    height: 60%;
+    height: 80%;
   }
 `;
 

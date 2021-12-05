@@ -8,12 +8,39 @@ import {
   ColWrapper,
   ImageWrapper
 } from "./ProjectElements";
+import './project.css';
 
 import { FaGlobe } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 
 import {AnimateSharedLayout, motion} from 'framer-motion';
 
+const projects = [
+  {
+    name: "Digital Classroom",
+    image: "./images/classroom.JPG",
+    github: "https://github.com/SujalLama/online-class",
+    website: "https://digital-class.netlify.app/",
+  },
+  {
+    name: "Digital Marketplace",
+    image: "./images/market.JPG",
+    github: "https://github.com/SujalLama/online-marketplace",
+    website: "https://digital-market.netlify.app/",
+  },
+  {
+    name: "Expense Tracker",
+    image: "./images/expense.JPG",
+    github: "https://github.com/SujalLama/expense-tracker",
+    website: "https://track-expense-101.netlify.app/",
+  },
+  {
+    name: "Social Media",
+    image: "./images/mern.JPG",
+    github: "https://github.com/SujalLama/social-media-app",
+    website: "",
+  },
+]
 const Projects = () => {
   const [isOpen, setIsOpen] = useState(true);
   const [website, setWebsite] = useState(true);
@@ -36,8 +63,23 @@ const Projects = () => {
         <Col1>
           <h2>Projects</h2>
         </Col1>
-
-        <Col2 website={website} webapp={webapp}>
+        <div className="project-wrapper">
+        {
+          projects.map(project => {
+            return <div className="project">
+              <img src={project.image} />
+              <div className="content">
+                <h3>{project.name}</h3>
+                <div className="content-btn-group">
+                  <a href={project.github} target="_blank"><AiFillGithub /></a>
+                  {project.website && <a href={project.website} target="_blank"><FaGlobe /></a>}
+                </div>
+              </div>
+            </div>
+          })
+        }
+        </div>
+        {/* <Col2 website={website} webapp={webapp}>
           <AnimateSharedLayout>
             <div className="wrapper">
               <div  className="btn" onClick={() => setIsOpen(!isOpen)}>
@@ -55,9 +97,9 @@ const Projects = () => {
               </div>
           </div>
           </AnimateSharedLayout>
-        </Col2>
+        </Col2> */}
 
-        {website && (
+        {/* {website && (
           <Col3 >
             <ColWrapper >
             
@@ -162,9 +204,9 @@ const Projects = () => {
               </div>
             </ColWrapper>
           </Col3>
-        )}
+        )} */}
 
-        {webapp && (
+        {/* {webapp && (
           <Col3 >
             <ColWrapper >
               <div className="slide slide-bottom">
@@ -271,7 +313,7 @@ const Projects = () => {
               </div>
             </ColWrapper>
           </Col3>
-        )}
+        )} */}
         
       </Wrapper>
     </>

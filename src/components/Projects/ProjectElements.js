@@ -10,17 +10,16 @@ export const Wrapper = styled.div`
   grid-template-rows: 200px 1fr;
   grid-template-areas:
     "a b"
-    "a c";
+    "a b";
 
   @media screen and (max-width: 768px) {
     width: 100vw;
     min-height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 15% 10% 75%;
+    grid-template-rows: 10% 90%;
     grid-template-areas:
       "a"
-      "b"
-      "c";
+      "b";
   }
 `;
 
